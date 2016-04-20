@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='asynczip',
-      version='1.0',
+      version='1.0.1',
       description='Asynchronous `zip` like aggregator for `async for`',
       long_description=open('README.rst', 'rt').read(),
       author='Julien Palard',
