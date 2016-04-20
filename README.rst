@@ -17,7 +17,9 @@ class AsyncZip
 --------------
 
 .. code:: python
+
     def __init__(self, *asynchronous_iterables, loop=None,
+
 
 - asynchronous_iterables: A collection of asynchronous iterables
 - loop: Optional named parameter, to give an specific event loop
@@ -45,6 +47,7 @@ Example usage
 -------------
 
 .. code:: python
+
     import asyncio
     from asynczip import AsyncZip
 
