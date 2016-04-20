@@ -9,5 +9,8 @@ setup(name='asynczip',
       author='Julien Palard',
       author_email='julien@palard.fr',
       url='https://github.com/JulienPalard/asynczip',
-      py_modules='asynczip'
+      py_modules='asynczip',
+      classifiers=['Development Status :: 4 - Beta',
+                   'Intended Audience :: Developers',
+                   'License :: OSI Approved :: BSD License']
      )
