@@ -72,7 +72,9 @@ Example usage
     asyncio.get_event_loop().run_until_complete(test())
 
 Gives:
+
 .. code::
+
     [<Task finished coro=<DummyAsyncIterable.__anext__() done, defined at test.py:11> result='f'>,<Task finished coro=<DummyAsyncIterable.__anext__() done, defined at test.py:11> result='b'>]
     [<Task finished coro=<DummyAsyncIterable.__anext__() done, defined at test.py:11> result='o'>, <Task finished coro=<DummyAsyncIterable.__anext__() done, defined at test.py:11> result='a'>]
     [<Task finished coro=<DummyAsyncIterable.__anext__() done, defined at test.py:11> result='o'>, <Task finished coro=<DummyAsyncIterable.__anext__() done, defined at test.py:11> result='r'>]
