@@ -1,9 +1,11 @@
-# AsyncZip
+AsyncZip
+========
 
 `AsyncZip` is a simple `zip` like function working with asynchronous
 iterables. It look, in many aspects, like `asyncio.wait`.
 
-## Usage
+Usage
+-----
 
 Given *n* asynchronous iterables, `AsyncZip(*aiterables)` gives a new
 asynchronous iterable iterating over all of them. Like `asyncio.wait`,
@@ -11,7 +13,8 @@ it's possible to wait for any iterable to yield something using the
 option `FIRST_COMPLETED`, or to wait for all of them using the option
 `ALL_COMPLETED`.
 
-## class AsyncZip
+class AsyncZip
+--------------
 
     def __init__(self, *asynchronous_iterables, loop=None,
                  yield_when=FIRST_COMPLETED):
@@ -21,23 +24,25 @@ option `FIRST_COMPLETED`, or to wait for all of them using the option
  - yield_when: Like `return_when` from `asyncio.wait`,
    `FIRST_COMPLETED` or `ALL_COMPLETED`.
 
-## FIRST_COMPLETED, ALL_COMPLETED
+FIRST_COMPLETED, ALL_COMPLETED
+------------------------------
 
 The two values `yield_when` can take, `FIRST_COMPLETED` and
 `ALL_COMPLETED` tell, like for `asyncio.wait`, when `AsyncZip` should
 yield. Defaults to FIRST_COMPLETED.
 
-### FIRST_COMPLETED
+ - FIRST_COMPLETED
 
-Like `select`, where `AsyncZip` yields each time any iterable yields,
-as soon as possible.
+    Like `select`, where `AsyncZip` yields each time any iterable yields,
+    as soon as possible.
 
-### ALL_COMPLETED
+ - ALL_COMPLETED
 
-It's the classical `zip` mode, where `AsyncZip` waits for a value for
-each iterator before yielding them all in a single loop.
+    It's the classical `zip` mode, where `AsyncZip` waits for a value for
+    each iterator before yielding them all in a single loop.
 
-## Example usage
+Example usage
+-------------
 
     import asyncio
     from asynczip import AsyncZip

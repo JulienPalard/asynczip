@@ -5,7 +5,7 @@ from distutils.core import setup
 setup(name='asynczip',
       version='1.0',
       description='Asynchronous `zip` like aggregator for `async for`',
-      long_description=open('README.md', 'rt').read(),
+      long_description=open('README.rst', 'rt').read(),
       author='Julien Palard',
       author_email='julien@palard.fr',
       keywords=['asyncio', 'zip', 'select', 'async for', 'async'],
